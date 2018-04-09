@@ -1,0 +1,23 @@
+<section class="weather-search">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit(myForm.value, myForm.valid)" #f="ngForm">
+    <label for="city">City</label>
+    <input  formControlName="cityName" type="text" id="city" required>
+    <button type="submit">Add City</button>
+  </form>
+  <div>
+    <span class="info">City found:</span> City Name
+  </div>
+</section>
+<!--<form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">-->
+
+  <!--<div>-->
+    <!--<label>City Name</label>-->
+    <!--<input type="text" formControlName="name">-->
+    <!--<small [hidden]="myForm.controls.name.valid || (myForm.controls.name.pristine && !submitted)">-->
+      <!--Name is required (minimum 1 characters).-->
+    <!--</small>-->
+  <!--</div>-->
+
+  <!--<button type="submit">Submit</button>-->
+
+<!--</form>-->
